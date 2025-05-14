@@ -8,7 +8,7 @@ image_name = registry + "/tilt/go-app"
 # Create Harbor secret
 local_resource(
     'harbor-secret',
-    cmd='kubectl create secret docker-registry harbor-secret --docker-server=harbor.mbizmarket.my.id:14567 --docker-username=mbiz-tech --docker-password=Mbiz123! --docker-email=mbiz-tech@mbizmarket.my.id --dry-run=client -o yaml | kubectl apply -f -',
+    cmd='kubectl create secret docker-registry harbor-secret --docker-server=harbor.mbizmarket.my.id:14567 --docker-username={{your_username}} --docker-password={{your_pass}} --docker-email={{your_email}} --dry-run=client -o yaml | kubectl apply -f -',
     deps=[],
     ignore=['.git'],
     auto_init=True
