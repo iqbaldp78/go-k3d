@@ -1,0 +1,5 @@
+{
+    "insecure-registries": [
+        "k3d-my-registry.localhost:5000"
+    ]
+}
